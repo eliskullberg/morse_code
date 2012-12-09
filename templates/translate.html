@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class="container">
+    <div class="page-header">
+        <h1>Translate 
+            {% if from_lang=="en" %}
+                 <small> Translate from Enligh to Morse code</small></h1>
+            {% else %}
+                <small> Translate from Morse code to English</small></h1>
+            {% endif %}
+    </div>
+    <div class="row-fluid">
+        <div class="span6 offset3">
+            <br><br><br>
+            <form action="/output/{{ from_lang }}" method="GET">
+                <div class="input-append">
+                    <input class="span8" id="translateString" name="translateString" type="text">
+                    <button class="btn" type="submit">Translate!</button>
+                    <a href="#myModal" role="button" class="btn" data-toggle="modal">Notes on syntax</a>
+                </div>    
+            </form>
+        </div>
+    </div>
+</div>
+<br><br><br>
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Some help</h3>
+  </div>
+  <div class="modal-body">
+    <p>When translating to Morse code, just enter some letters and spaces. </p>
+    <p>When translating to Enligh code, just enter morse code in the format ".", "-", " "</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+{% endblock %}

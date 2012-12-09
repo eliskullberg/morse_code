@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="hero-unit">
+        <h1> Morse code made simple.</h1>
+        <p> This site translates morse code to English (and vice versa). </p>
+        <p><a class="btn btn btn-large" href="/translate/mo">I'm on a boat! &raquo;</a>
+        <a class="btn btn btn-large" href="/translate/en">I'm on land! &raquo;</a>
+        <a href="#myModal" role="button" class="btn btn-inverse btn-large" data-toggle="modal">WTF is morse? &raquo;</a></p>
+    
+    </div>
+
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">From wikipedia:</h3>
+  </div>
+  <div class="modal-body">
+    <p class="lead">From wikipedia</p>
+    <p>
+        Morse code is a method of transmitting text information as a series of on-off tones, lights, or clicks that can be directly understood by a skilled listener or observer without special equipment. The International Morse Code[1] encodes the ISO basic Latin alphabet, some extra Latin letters, the Arabic numerals and a small set of punctuation and procedural signals as standardized sequences of short and long signals called "dots" and "dashes",[1] or "dits" and "dahs". Because many non-English natural languages use more than the 26 Roman letters, extensions to the Morse alphabet exist for those languages.
+    </p>
+    <p> <a href="http://www.godfreydykes.info/international%20morse%20code.pdf"> Get the standard!  </a></p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+
+{% endblock %}
